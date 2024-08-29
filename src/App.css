@@ -1,3 +1,9 @@
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 small {
   position: fixed;
   bottom: 0;

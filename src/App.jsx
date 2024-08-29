@@ -1,10 +1,13 @@
 import './App.css';
+import CatMemoryGame from './components/CatMemoryGame';
 
 function App() {
 
 	return (
 		<>
-			<div></div>
+			<div className='game'>
+        <CatMemoryGame />
+      </div>
 			<small>
 				Photo by{' '}
 				<a href='https://unsplash.com/@alvannee?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>
