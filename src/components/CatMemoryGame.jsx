@@ -125,7 +125,7 @@ const CatMemoryGame = () => {
 		<div className='gameboard'>
 			<h1>Cat Memory Game</h1>
 			<div className='game-info'>
-				<p>Difficulty: {difficulty}</p>
+				<p>Difficulty: {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</p>
 				<p>Score: {score}</p>
 				<p>Best Score: {bestScore}</p>
 				{showScoreIndicator && <ScoreIndicator />}
@@ -151,22 +151,23 @@ const CatMemoryGame = () => {
 						<div
 							key={card.id}
 							onClick={() => handleCardClick(card.id)}
-							className={`card ${
+							className={`gameboard card ${
 								clickFeedback && clickFeedback.id === card.id
 									? clickFeedback.status
 									: ''
-							} gameboard`}
+							}`}
 						>
 							<img
 								src={card.image}
 								alt={card.name}
 								style={{
-									width: '150px',
-									height: '150px',
-									objectFit: 'cover',
+									width: '170px',
+									height: '205px',
+                                    resizeMode: 'cover',
+									objectFit: 'scale-down',
 								}}
 							/>
-							<p>{card.name}</p>
+							<p className='breedName'>{card.name}</p>
 						</div>
 					))}
 				</div>
