@@ -1,3 +1,9 @@
+.title {
+    color: rgb(88, 67, 118);
+    font-size: 48px;
+    font-weight: 800;
+}
+
 .gameboard {
 	display: flex;
 	flex-direction: column;
@@ -6,6 +12,8 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
+    font-weight: 600;
+    color: black;
 }
 
 .game-info {
@@ -45,13 +53,13 @@
 .breedName {
     font-weight: bold;
     font-size: 20px;
-    margin-top: -10px;
+    color: rgb(249, 249, 249);
 }
 
 .score-indicator {
 	position: absolute;
-	left: 35px;
-	top: 30px;
+	left: 38px;
+	top: 8px;
 	color: green;
 	font-weight: bold;
 	font-size: 24px;
@@ -66,6 +74,6 @@
 	}
 	100% {
 		opacity: 0;
-		transform: translateY(-10px);
+		transform: translateY(-30px);
 	}
 }

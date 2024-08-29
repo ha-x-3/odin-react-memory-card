@@ -107,7 +107,7 @@ const CatMemoryGame = () => {
 	if (!difficulty) {
 		return (
 			<div>
-				<h1>Cat Memory Game</h1>
+				<h1 className='title'>Cat Memory Game</h1>
 				<p>Choose difficulty:</p>
 				{Object.keys(difficulties).map((diff) => (
 					<button
@@ -123,7 +123,7 @@ const CatMemoryGame = () => {
 
 	return (
 		<div className='gameboard'>
-			<h1>Cat Memory Game</h1>
+			<h1 className='title'>Cat Memory Game</h1>
 			<div className='game-info'>
 				<p>Difficulty: {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</p>
 				<p>Score: {score}</p>
