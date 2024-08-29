@@ -21,6 +21,11 @@
 	margin-bottom: 20px;
 }
 
+.howTo {
+    width: 600px;
+    margin: 40px 0;
+}
+
 .card-container {
 	display: flex;
 	flex-wrap: wrap;

@@ -108,6 +108,7 @@ const CatMemoryGame = () => {
 		return (
 			<div className='gameboard'>
 				<h1 className='title'>Cat Memory Game</h1>
+                <p className='howTo'>How To Play - Click each image only once. Breeds can be repeated, so look at the images carefully! Game over if you pick the same image twice.</p>
 				<p>Choose difficulty:</p>
 				{Object.keys(difficulties).map((diff) => (
 					<button
@@ -125,7 +126,10 @@ const CatMemoryGame = () => {
 		<div className='gameboard'>
 			<h1 className='title'>Cat Memory Game</h1>
 			<div className='game-info'>
-				<p>Difficulty: {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</p>
+				<p>
+					Difficulty:{' '}
+					{difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+				</p>
 				<p>Score: {score}</p>
 				<p>Best Score: {bestScore}</p>
 				{showScoreIndicator && <ScoreIndicator />}
@@ -133,16 +137,26 @@ const CatMemoryGame = () => {
 			{gameOver && (
 				<div className='gameboard'>
 					<p>Game Over! You clicked the same cat twice.</p>
-					<button onClick={resetGame}>Play Again</button>
+					<button
+						onClick={() => {
+							setDifficulty(null);
+							resetGame();
+						}}
+					>
+						Choose New Difficulty
+					</button>
+					<button onClick={resetGame}>Try Again</button>
 				</div>
 			)}
 			{gameWon && (
 				<div>
 					<p>Congratulations! You won!</p>
-					<button onClick={() => {
-                        setDifficulty(null)
-                        resetGame();
-                    }}>
+					<button
+						onClick={() => {
+							setDifficulty(null);
+							resetGame();
+						}}
+					>
 						Choose New Difficulty
 					</button>
 					<button onClick={resetGame}>Play Again</button>
@@ -166,7 +180,7 @@ const CatMemoryGame = () => {
 								style={{
 									width: '170px',
 									height: '205px',
-                                    resizeMode: 'cover',
+									resizeMode: 'cover',
 									objectFit: 'scale-down',
 								}}
 							/>
