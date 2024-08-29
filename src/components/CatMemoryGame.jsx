@@ -106,7 +106,7 @@ const CatMemoryGame = () => {
 
 	if (!difficulty) {
 		return (
-			<div>
+			<div className='gameboard'>
 				<h1 className='title'>Cat Memory Game</h1>
 				<p>Choose difficulty:</p>
 				{Object.keys(difficulties).map((diff) => (
@@ -131,7 +131,7 @@ const CatMemoryGame = () => {
 				{showScoreIndicator && <ScoreIndicator />}
 			</div>
 			{gameOver && (
-				<div>
+				<div className='gameboard'>
 					<p>Game Over! You clicked the same cat twice.</p>
 					<button onClick={resetGame}>Play Again</button>
 				</div>
@@ -139,7 +139,10 @@ const CatMemoryGame = () => {
 			{gameWon && (
 				<div>
 					<p>Congratulations! You won!</p>
-					<button onClick={() => setDifficulty(null)}>
+					<button onClick={() => {
+                        setDifficulty(null)
+                        resetGame();
+                    }}>
 						Choose New Difficulty
 					</button>
 					<button onClick={resetGame}>Play Again</button>
