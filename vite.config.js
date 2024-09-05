@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
 	base: '/odin-react-memory-card',
 	plugins: [react()],
+	test: {
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: './tests/setup.js',
+	},
 });
