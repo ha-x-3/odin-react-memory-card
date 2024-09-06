@@ -19,3 +19,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+  :root {
+    background-color: rgb(145, 213, 222);
+    background-image: url('./assets/catBackground.jpg');
+    background-position: bottom -400px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

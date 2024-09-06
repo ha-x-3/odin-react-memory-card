@@ -82,3 +82,47 @@
 		transform: translateY(-30px);
 	}
 }
+
+/* Tablets and medium devices (min-width: 768px and max-width: 1024px) */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 36px;
+    }
+    .gameboard {
+        padding: 10px;
+    }
+    .howTo {
+        width: 80%;
+    }
+    .breedName {
+        font-size: 18px;
+    }
+}
+
+/* Mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .title {
+        font-size: 28px;
+    }
+    .gameboard {
+        padding: 10px;
+    }
+    .howTo {
+        width: 100%;
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-gap: 10px;
+    }
+    .breedName {
+        font-size: 16px;
+    }
+    .score-indicator {
+        font-size: 18px;
+        left: 20px;
+        top: 5px;
+    }
+}
