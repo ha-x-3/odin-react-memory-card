@@ -109,7 +109,7 @@ const CatMemoryGame = () => {
 			<div className='gameboard'>
 				<h1 className='title'>Cat Memory Game</h1>
                 <p className='howTo'>How To Play - Click each image only once. Breeds can be repeated, so look at the images carefully! Game over if you pick the same image twice.</p>
-				<p>Choose difficulty:</p>
+				<p>Choose difficulty to start:</p>
 				{Object.keys(difficulties).map((diff) => (
 					<button
 						key={diff}
