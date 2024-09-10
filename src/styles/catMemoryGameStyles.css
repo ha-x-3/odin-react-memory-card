@@ -1,7 +1,12 @@
 .title {
-    color: rgb(88, 67, 118);
+    color: white;
+	background-color: rgb(88, 67, 118);
     font-size: 48px;
     font-weight: 800;
+	width: 100vw;
+	text-align: center;
+	padding: 20px 0;
+	margin: -20px 0;
 }
 
 .gameboard {
