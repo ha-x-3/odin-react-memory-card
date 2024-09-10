@@ -136,7 +136,7 @@ const CatMemoryGame = () => {
 			</div>
 			{gameOver && (
 				<div className='gameboard'>
-					<p>Game Over! You clicked the same cat twice.</p>
+					<p className='gameOver'>Game Over! You clicked the same cat twice.</p>
 					<button
 						onClick={() => {
 							setDifficulty(null);
@@ -150,7 +150,7 @@ const CatMemoryGame = () => {
 			)}
 			{gameWon && (
 				<div>
-					<p>Congratulations! You won!</p>
+					<p className='gameOver'>Congratulations! You won!</p>
 					<button
 						onClick={() => {
 							setDifficulty(null);
